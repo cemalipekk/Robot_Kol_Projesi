@@ -1,7 +1,5 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
-#include <Servo.h>
-Servo servo1,servo2,servo3,servo4;
 
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 
@@ -9,7 +7,6 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 #define MAX_PULSE_WIDTH       2350
 #define DEFAULT_PULSE_WIDTH   1500
 #define FREQUENCY             50
-
 
 uint8_t servonum = 0;
 
@@ -80,7 +77,4 @@ void loop() {
   analog_value = int(float(pulse_wide) / 1000000 * FREQUENCY * 4096);
   Serial1.println(analog_value);
   return analog_value;
-
- 
- 
  }
